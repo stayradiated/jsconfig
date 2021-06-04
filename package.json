@@ -21,11 +21,10 @@
     "tidy": "xo --fix",
     "test": "ava",
     "build": "del-cli dist && tsc",
-    "update-jsconfig": "update-jsconfig",
     "publish": "np"
   },
   "bin": {
-    "update-jsconfig": "bin/update-jsconfig"
+    "jsconfig": "bin/jsconfig"
   },
   "devDependencies": {
     "ava": "3.15.0",
@@ -48,7 +47,6 @@
     "config"
   ],
   "dependencies": {
-    "read-pkg": "6.0.0",
     "read-pkg-up": "8.0.0",
     "write-pkg": "4.0.0"
   },
