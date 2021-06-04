@@ -18,7 +18,7 @@
     "url": "git+https://github.com/stayradiated/jsconfig.git"
   },
   "scripts": {
-    "post-install": "update-jsconfig",
+    "postinstall": "update-jsconfig",
     "tidy": "xo --fix",
     "test": "ava",
     "build": "del-cli dist && tsc",
