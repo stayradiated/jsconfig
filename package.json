@@ -22,7 +22,8 @@
     "tidy": "xo --fix",
     "test": "ava",
     "build": "del-cli dist && tsc",
-    "update-jsconfig": "update-jsconfig"
+    "update-jsconfig": "update-jsconfig",
+    "publish": "np"
   },
   "bin": {
     "update-jsconfig": "./dist/index.js"
@@ -30,6 +31,7 @@
   "devDependencies": {
     "ava": "3.15.0",
     "del-cli": "3.0.1",
+    "np": "7.5.0",
     "typescript": "4.3.2",
     "xo": "0.40.2"
   },
