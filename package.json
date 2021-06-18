@@ -1,5 +1,5 @@
 {
-  "version": "1.9.0",
+  "version": "1.10.0",
   "type": "module",
   "exports": "./dist/index.js",
   "name": "@stayradiated/jsconfig",
@@ -20,17 +20,16 @@
   "scripts": {
     "tidy": "xo --fix",
     "test": "ava",
-    "build": "del-cli dist && tsc",
-    "publish": "np"
+    "build": "del-cli dist && tsc"
   },
   "bin": {
     "jsconfig": "dist/index.js"
   },
   "devDependencies": {
     "@changesets/cli": "2.16.0",
+    "@types/node": "15.12.3",
     "ava": "3.15.0",
     "del-cli": "4.0.0",
-    "np": "7.5.0",
     "typescript": "4.3.4",
     "xo": "0.40.2"
   },
