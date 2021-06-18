@@ -27,6 +27,7 @@
     "jsconfig": "dist/index.js"
   },
   "devDependencies": {
+    "@changesets/cli": "2.16.0",
     "ava": "3.15.0",
     "del-cli": "4.0.0",
     "np": "7.5.0",
