@@ -1,6 +1,14 @@
 # @stayradiated/jsconfig
 
+## 1.11.0
+
+### Minor Changes
+
+- Update devDependencies
+- Automatically read package versions from package.json
+
 ## 1.10.0
+
 ### Minor Changes
 
 - Bump dev dependencies
