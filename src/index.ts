@@ -5,7 +5,7 @@ import { readPackageUpAsync } from 'read-pkg-up'
 
 import scripts from './scripts.js'
 import config from './config.js'
-import devDependencies from './dev-dependencies.js'
+import { getDevDependencies } from './dev-dependencies.js'
 import tsconfig from './tsconfig.js'
 
 type PackageJSON = {
@@ -35,7 +35,7 @@ void (async function () {
 
   const packageDevDependencies: Record<string, string> = {
     ...packageJson.devDependencies,
-    ...devDependencies,
+    ...(await getDevDependencies()),
   }
 
   await writePkg(pkg.path, {
