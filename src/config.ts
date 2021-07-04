@@ -8,12 +8,18 @@ const config = {
     space: true,
     semicolon: false,
     prettier: true,
+    plugins: ['fp'],
+    extends: ['plugin:fp/recommended'],
     rules: {
       'ava/no-ignored-test-files': [
         'error',
         { files: ['**/src/**/*.test.ts'], extensions: ['ts'] },
       ],
       'unicorn/prefer-node-protocol': 'off',
+      'fp/no-unused-expression': 'off',
+      'fp/no-nil': 'off',
+      'fp/no-loops': 'off',
+      'fp/no-mutation': 'off',
     },
   },
   prettier: {

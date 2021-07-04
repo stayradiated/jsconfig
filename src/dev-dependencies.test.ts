@@ -8,6 +8,7 @@ test('getDevDependencies', async (t) => {
   t.deepEqual(Object.keys(devDependencies), [
     'ava',
     'del-cli',
+    'eslint-plugin-fp',
     'typescript',
     'xo',
   ])
