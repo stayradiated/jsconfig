@@ -1,5 +1,11 @@
 # @stayradiated/jsconfig
 
+## 1.13.0
+
+### Minor Changes
+
+- dfa6b1a: move rambda to dependencies
+
 ## 1.12.0
 
 ### Minor Changes
