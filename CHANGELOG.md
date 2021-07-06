@@ -1,5 +1,11 @@
 # @stayradiated/jsconfig
 
+## 1.14.0
+
+### Minor Changes
+
+- Disable ava/assertion-arguments
+
 ## 1.13.0
 
 ### Minor Changes

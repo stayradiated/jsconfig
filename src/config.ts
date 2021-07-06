@@ -11,6 +11,7 @@ const config = {
     plugins: ['fp'],
     extends: ['plugin:fp/recommended'],
     rules: {
+      'ava/assertion-arguments': 'off',
       'ava/no-ignored-test-files': [
         'error',
         { files: ['**/src/**/*.test.ts'], extensions: ['ts'] },
