@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import { dirname, join } from 'path'
-import writePkg from 'write-pkg'
+import { writePackage } from 'write-pkg'
 import { readPackageUpAsync } from 'read-pkg-up'
 import { omit } from 'rambda'
 
@@ -39,7 +39,7 @@ const main = async (): Promise<void | Error> => {
     ...(await getDevDependencies()),
   }
 
-  await writePkg(pkg.path, {
+  await writePackage(pkg.path, {
     ...packageJson,
     scripts: packageScripts,
     devDependencies: packageDevDependencies,
