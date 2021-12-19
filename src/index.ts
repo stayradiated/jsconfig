@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import { dirname, join } from 'path'
 import { writePackage } from 'write-pkg'
-import { readPackageUpAsync } from 'read-pkg-up'
+import { readPackageUp } from 'read-pkg-up'
 import { omit } from 'rambda'
 
 import scripts from './scripts.js'
@@ -17,7 +17,7 @@ type PackageJSON = {
 }
 
 const main = async (): Promise<void | Error> => {
-  const pkg = await readPackageUpAsync()
+  const pkg = await readPackageUp()
   if (!pkg) {
     return new Error('Could not find package.json in path.')
   }
