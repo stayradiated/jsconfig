@@ -9,7 +9,7 @@ import config from './config.js'
 import { getDevDependencies } from './dev-dependencies.js'
 import tsconfig from './tsconfig.js'
 
-type PackageJSON = {
+type PackageJson = {
   _id?: string
   readme?: string
   scripts?: Record<string, string>
@@ -26,7 +26,7 @@ const main = async (): Promise<void | Error> => {
 
   const packageJson = omit(
     ['_id', 'readme'],
-    pkg.packageJson as unknown as PackageJSON,
+    pkg.packageJson as unknown as PackageJson,
   )
 
   const packageScripts: Record<string, string> = {

@@ -1,23 +1,22 @@
 import fs from 'fs/promises'
 
-const { pathname: packageJSONPath } = new URL(
+const { pathname: packageJsonPath } = new URL(
   '../package.json',
   import.meta.url,
 )
 const packageNames = ['ava', 'del-cli', 'eslint-plugin-fp', 'typescript', 'xo']
 
-type PackageJSON = {
+type PackageJson = {
   devDependencies: Record<string, string>
 }
 
 const getDevDependencies = async () => {
-  const packageJSON = JSON.parse(
-    await fs.readFile(packageJSONPath, 'utf8'),
-  ) as PackageJSON
+  const packageJsonBuffer = await fs.readFile(packageJsonPath)
+  const packageJson = JSON.parse(packageJsonBuffer.toString()) as PackageJson
 
   const devDependencies: Record<string, string> = {}
   for (const packageName of packageNames) {
-    const definedVersion = packageJSON.devDependencies[packageName]
+    const definedVersion = packageJson.devDependencies[packageName]
 
     if (definedVersion) {
       devDependencies[packageName] = definedVersion
