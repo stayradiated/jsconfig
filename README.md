@@ -10,13 +10,10 @@ back semicolons.
 
 ## How do you use this?
 
-This is the typically the first dependency I install after creating a new JS
+This is the typically one of the first commands I run after starting a new JS
 project.
 
 ```
-# optional, but recommended
-npm install --save-dev @stayradiated/jsconfig
-
 npx @stayradiated/jsconfig
 ```
 
