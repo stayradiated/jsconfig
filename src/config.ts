@@ -14,7 +14,6 @@ const config = {
         'error',
         { files: ['**/src/**/*.test.ts'], extensions: ['ts'] },
       ],
-      'unicorn/prefer-node-protocol': 'off'
     },
   },
   prettier: {
