@@ -5,8 +5,8 @@ const tsconfig = {
     module: 'node16',
     moduleResolution: 'node16',
     moduleDetection: 'force',
-    target: 'ES2020', // Node.js 14
-    lib: ['ES2020', 'DOM'],
+    target: 'ES2022', // Node.js 16
+    lib: ['ES2022', 'DOM'],
     allowSyntheticDefaultImports: true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
     resolveJsonModule: false, // ESM doesn't yet support JSON modules.
     jsx: 'react',
