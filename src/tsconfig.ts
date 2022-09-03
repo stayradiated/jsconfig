@@ -1,5 +1,5 @@
 const tsconfig = {
-  __comment: 'This typescipt config is managed by `npx @stayradiated/jsconfig`',
+  __comment: 'This typescipt config is managed by `@stayradiated/jsconfig`',
   compilerOptions: {
     outDir: 'dist',
     module: 'node16',

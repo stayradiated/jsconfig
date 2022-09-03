@@ -1,6 +1,5 @@
 const config = {
-  __comment:
-    'The following configs are managed by `npx @stayradiated/jsconfig`',
+  __comment: 'The following configs are managed by `@stayradiated/jsconfig`',
   ava: {
     verbose: true,
   },

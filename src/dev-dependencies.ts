@@ -4,7 +4,7 @@ const { pathname: packageJsonPath } = new URL(
   '../package.json',
   import.meta.url,
 )
-const packageNames = ['ava', 'del-cli', 'typescript', 'xo']
+const packageNames = ['ava', 'typescript', 'xo']
 
 type PackageJson = {
   devDependencies: Record<string, string>
