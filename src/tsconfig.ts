@@ -4,8 +4,8 @@ const tsconfig = {
   __comment: 'This typescipt config is managed by `@stayradiated/jsconfig`',
   compilerOptions: {
     outDir: 'dist',
-    module: 'node16',
-    moduleResolution: 'node16',
+    module: 'ES2022',
+    moduleResolution: 'node',
     moduleDetection: 'force',
     target: 'ES2022',
     lib: ['ES2022', 'DOM', 'DOM.Iterable'],
