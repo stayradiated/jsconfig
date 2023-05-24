@@ -1,19 +1,9 @@
 const config = {
   __comment: 'The following configs are managed by `@stayradiated/jsconfig`',
-  ava: {
-    verbose: true,
-  },
   xo: {
     space: true,
     semicolon: false,
     prettier: true,
-    rules: {
-      'ava/assertion-arguments': 'off',
-      'ava/no-ignored-test-files': [
-        'error',
-        { files: ['**/src/**/*.test.ts'], extensions: ['ts'] },
-      ],
-    },
   },
   prettier: {
     arrowParens: 'always',

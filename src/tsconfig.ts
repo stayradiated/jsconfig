@@ -1,14 +1,16 @@
+// forked from sindresorhus/tsconfig
+// https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
 const tsconfig = {
   __comment: 'This typescipt config is managed by `@stayradiated/jsconfig`',
   compilerOptions: {
     outDir: 'dist',
-    module: 'ES2020',
-    moduleResolution: 'node',
+    module: 'node16',
+    moduleResolution: 'node16',
     moduleDetection: 'force',
-    target: 'ES2022', // Node.js 16
-    lib: ['ES2022', 'DOM'],
-    allowSyntheticDefaultImports: true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
-    resolveJsonModule: false, // ESM doesn't yet support JSON modules.
+    target: 'ES2022',
+    lib: ['ES2022', 'DOM', 'DOM.Iterable'],
+    allowSyntheticDefaultImports: true,
+    resolveJsonModule: false,
     jsx: 'react',
     declaration: true,
     pretty: true,

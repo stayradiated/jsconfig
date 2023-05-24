@@ -3,7 +3,6 @@ import { dirname, join } from 'node:path'
 import { writePackage } from 'write-pkg'
 import { readPackageUp } from 'read-pkg-up'
 import { omit } from 'rambda'
-
 import scripts from './scripts.js'
 import config from './config.js'
 import { getDevDependencies } from './dev-dependencies.js'
@@ -41,6 +40,7 @@ const main = async (): Promise<void | Error> => {
 
   await writePackage(pkg.path, {
     ...packageJson,
+    type: 'module',
     scripts: packageScripts,
     devDependencies: packageDevDependencies,
     ...config,
@@ -50,7 +50,9 @@ const main = async (): Promise<void | Error> => {
   await fs.writeFile(tsconfigPath, JSON.stringify(tsconfig, null, 2))
 }
 
-void main().then((error) => {
+try {
+  await main()
+} catch (error: unknown) {
   if (error instanceof Error) {
     console.error(error.message)
   } else {
@@ -58,4 +60,4 @@ void main().then((error) => {
       'Your package.json has been updated. Please run "npm install" to complete the upgrade.',
     )
   }
-})
+}

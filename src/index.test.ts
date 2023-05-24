@@ -1,5 +1,5 @@
-import test from 'ava'
+import { test, expect } from 'vitest'
 
-test('should pass', (t) => {
-  t.pass()
+test('should pass', () => {
+  expect(1 + 1).toBe(2)
 })

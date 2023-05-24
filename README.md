@@ -20,9 +20,8 @@ npx @stayradiated/jsconfig
 This will modify the nearest `package.json` and add the following scripts:
 
 - `tidy`: lint your code with `xo --fix`
-- `test`: test your code with `ava`
+- `test`: test your code with `vitest`
 - `build`: build your code with `tsc`
-- `publish`: publish your code with `np`
 
 ## Implementation
 
@@ -30,14 +29,14 @@ This package relies on `read-pkg-up` and `write-pkg` to do the heavy lifting.
 These dependencies are used to modify the nearest `package.json` file:
 
 - several dependencies are injected into the `.devDependencies`, so that you
-    can run `xo`, `ava`, `np` locally within your project. The versions of these
-    dependencies are set by `jsconfig` and may not be the latest available
-    versions.
+  can run `xo` and `vitest` locally within your project. The versions of these
+  dependencies are set by `jsconfig` and may not be the latest available
+  versions.
 - several scripts are injected into the `.scripts`, so that you can run `tidy`,
-    `test`, `build` and `publish`.
-- several config definitions are overwritten, including `.xo`, `.ava` and
-    `.prettier`.  It overwrites instead of extending so that old properties can
-    be removed in the future.
+  `test` and `build`
+- several config definitions are overwritten, including `.xo`, and `.prettier`.
+  It overwrites instead of extending so that old properties can be removed in
+  the future.
 
 Typescript doesn't support reading configuration from `package.json` so instead
 we have to write to `tsconfig.json`. This file is also overwritten each time,

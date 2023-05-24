@@ -2,13 +2,14 @@
   "__comment": "This typescipt config is managed by `@stayradiated/jsconfig`",
   "compilerOptions": {
     "outDir": "dist",
-    "module": "ES2020",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "moduleDetection": "force",
     "target": "ES2022",
     "lib": [
       "ES2022",
-      "DOM"
+      "DOM",
+      "DOM.Iterable"
     ],
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": false,

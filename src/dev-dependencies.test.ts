@@ -1,9 +1,8 @@
-import test from 'ava'
-
+import { test, expect } from 'vitest'
 import { getDevDependencies } from './dev-dependencies.js'
 
-test('getDevDependencies', async (t) => {
+test('getDevDependencies', async () => {
   const devDependencies = await getDevDependencies()
 
-  t.deepEqual(Object.keys(devDependencies), ['ava', 'typescript', 'xo'])
+  expect(Object.keys(devDependencies)).toEqual(['vitest', 'typescript', 'xo'])
 })

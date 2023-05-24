@@ -19,17 +19,17 @@
   },
   "scripts": {
     "tidy": "xo --fix",
-    "test": "ava",
+    "test": "vitest --watch=false",
     "build": "rm -rf ./dist && tsc"
   },
   "bin": {
     "jsconfig": "dist/index.js"
   },
   "devDependencies": {
-    "@types/node": "18.7.14",
-    "ava": "4.3.3",
-    "typescript": "4.8.2",
-    "xo": "0.52.3"
+    "@types/node": "20.2.3",
+    "typescript": "5.0.4",
+    "vitest": "0.31.1",
+    "xo": "0.54.2"
   },
   "engines": {
     "node": ">=16"
@@ -37,7 +37,7 @@
   "keywords": [
     "jsconfig",
     "tsconfig",
-    "ava",
+    "vitest",
     "eslint",
     "prettier",
     "sync",
@@ -45,32 +45,15 @@
     "config"
   ],
   "dependencies": {
-    "rambda": "7.2.1",
+    "rambda": "7.5.0",
     "read-pkg-up": "9.1.0",
     "write-pkg": "5.1.0"
   },
   "__comment": "The following configs are managed by `@stayradiated/jsconfig`",
-  "ava": {
-    "verbose": true
-  },
   "xo": {
     "space": true,
     "semicolon": false,
-    "prettier": true,
-    "rules": {
-      "ava/assertion-arguments": "off",
-      "ava/no-ignored-test-files": [
-        "error",
-        {
-          "files": [
-            "**/src/**/*.test.ts"
-          ],
-          "extensions": [
-            "ts"
-          ]
-        }
-      ]
-    }
+    "prettier": true
   },
   "prettier": {
     "arrowParens": "always",
