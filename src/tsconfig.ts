@@ -1,4 +1,4 @@
-// forked from sindresorhus/tsconfig
+// Forked from sindresorhus/tsconfig
 // https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
 const tsconfig = {
   __comment: 'This typescipt config is managed by `@stayradiated/jsconfig`',
@@ -28,6 +28,11 @@ const tsconfig = {
     useDefineForClassFields: true,
     forceConsistentCasingInFileNames: true,
     skipLibCheck: true,
+    baseUrl: '.',
+    paths: {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      '~/*': ['src/*'],
+    },
   },
 }
 
