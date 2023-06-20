@@ -14,6 +14,11 @@ const config = {
     trailingComma: 'all',
     useTabs: false,
   },
+  "imports": {
+    "#src/*": {
+      "node": "./dist/*"
+    }
+  },
 }
 
 export default config

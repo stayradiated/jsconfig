@@ -12,6 +12,7 @@ type PackageJson = {
   _id?: string
   readme?: string
   scripts?: Record<string, string>
+  dependencies?: Record<string, string>
   devDependencies?: Record<string, string>
 }
 
@@ -42,6 +43,7 @@ const main = async (): Promise<void | Error> => {
     ...packageJson,
     type: 'module',
     scripts: packageScripts,
+    dependencies: packageJson.dependencies ?? {},
     devDependencies: packageDevDependencies,
     ...config,
   })

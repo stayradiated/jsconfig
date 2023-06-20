@@ -4,8 +4,8 @@ const tsconfig = {
   __comment: 'This typescipt config is managed by `@stayradiated/jsconfig`',
   compilerOptions: {
     outDir: 'dist',
-    module: 'ES2022',
-    moduleResolution: 'node',
+    module: 'node16',
+    moduleResolution: 'node16',
     moduleDetection: 'force',
     target: 'ES2022',
     lib: ['ES2022', 'DOM', 'DOM.Iterable'],
@@ -28,11 +28,11 @@ const tsconfig = {
     useDefineForClassFields: true,
     forceConsistentCasingInFileNames: true,
     skipLibCheck: true,
-    baseUrl: '.',
+    rootDir: "src",
+    baseUrl: ".",
     paths: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
-      '~/*': ['src/*'],
-    },
+      "#src/*": ["src/*"]
+    }
   },
 }
 
